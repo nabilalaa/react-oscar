@@ -31,7 +31,7 @@ const Movie = async ({ params }) => {
                 className="w-full bg-center bg-cover relative text-white"
                 style={{
                     backgroundImage: `url(
-                    "https://image.tmdb.org/t/p/original${movie.backdrop_path}"
+                    "https://image.tmdb.org/t/p/w1280${movie.backdrop_path}"
                 )`,
                 }}
             >
