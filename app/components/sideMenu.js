@@ -51,13 +51,22 @@ export default function SideMenu() {
                 >
                     <li className="">افلام</li>
                 </Link>
-                <Link className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold">
+                <Link
+                    href={""}
+                    className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold"
+                >
                     <li className="">مسلسلات</li>
                 </Link>
-                <Link className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold">
+                <Link
+                    href={""}
+                    className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold"
+                >
                     <li className="">اتصل بنا</li>
                 </Link>
-                <Link className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold">
+                <Link
+                    href={""}
+                    className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold"
+                >
                     <li className="">عنا</li>
                 </Link>
             </ul>

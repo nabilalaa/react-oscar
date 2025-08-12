@@ -28,17 +28,26 @@ export default function Nav() {
                             </Link>
                         </li>
                         <li>
-                            <Link className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity">
+                            <Link
+                                href={""}
+                                className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity"
+                            >
                                 مسلسلات
                             </Link>
                         </li>
                         <li>
-                            <Link className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity">
+                            <Link
+                                href={""}
+                                className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity"
+                            >
                                 اتصل بنا
                             </Link>
                         </li>
                         <li>
-                            <Link className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity">
+                            <Link
+                                href={""}
+                                className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity"
+                            >
                                 عنا
                             </Link>
                         </li>
