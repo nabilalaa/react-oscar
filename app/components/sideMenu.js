@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function SideMenu() {
     const [isShow, setIsShow] = useState(false);
@@ -37,28 +38,28 @@ export default function SideMenu() {
                 oscar
             </div>
             <ul className="links p-4 text-white">
-                <a
+                <Link
                     href="/"
                     className="router-link-active router-link-exact-active hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold"
                     aria-current="page"
                 >
                     <li className="">الصفحة الرئيسية</li>
-                </a>
-                <a
+                </Link>
+                <Link
                     href="/about"
                     className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold"
                 >
                     <li className="">افلام</li>
-                </a>
-                <a className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold">
+                </Link>
+                <Link className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold">
                     <li className="">مسلسلات</li>
-                </a>
-                <a className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold">
+                </Link>
+                <Link className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold">
                     <li className="">اتصل بنا</li>
-                </a>
-                <a className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold">
+                </Link>
+                <Link className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold">
                     <li className="">عنا</li>
-                </a>
+                </Link>
             </ul>
         </div>
     );

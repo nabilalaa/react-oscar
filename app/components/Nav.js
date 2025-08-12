@@ -20,36 +20,27 @@ export default function Nav() {
                             </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 href="/about"
                                 className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity"
                             >
                                 افلام
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                navigateto="about"
-                                className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity"
-                            >
+                            <Link className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity">
                                 مسلسلات
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                navigateto="about"
-                                className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity"
-                            >
+                            <Link className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity">
                                 اتصل بنا
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                navigateto="about"
-                                className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity"
-                            >
+                            <Link className="p-2 ml-4 opacity-80 font-bold hover:opacity-100 transition-opacity">
                                 عنا
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <div
