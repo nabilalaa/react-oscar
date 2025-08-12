@@ -69,7 +69,7 @@ const Movie = async ({ params }) => {
             </header>
             <section className="credits mt-8">
                 <div className="container">
-                    <div className="grid grid-cols-6 gap-4">
+                    <div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-4">
                         {cast.slice(0, 10).map((actor) => {
                             return (
                                 <div
