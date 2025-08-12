@@ -24,9 +24,7 @@ const Movie = async ({ params }) => {
     );
 
     const { cast } = await dataCredits.json();
-    console.log("------------");
 
-    console.log(cast.slice(0, 10));
     return (
         <>
             <header
