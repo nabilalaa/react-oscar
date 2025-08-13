@@ -6,10 +6,10 @@ export default function SideMenu() {
     const [isShow, setIsShow] = useState(false);
 
     const handleClickOutside = (e) => {
+        console.log("ss");
         e.target.id == "closemenu"
             ? setIsShow(false)
-            : e.target.id === "btn_sideBar" ||
-              document.querySelector("#sidemenu").contains(e.target)
+            : e.target.id === "btn_sideBar"
             ? setIsShow(true)
             : setIsShow(false);
     };
