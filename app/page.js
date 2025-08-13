@@ -1,9 +1,8 @@
-import Link from "next/link";
-import Card from "./components/card";
 import { Suspense } from "react";
 import Loading from "./components/loading";
+import Carousel from "./components/Carousel";
 export default async function Index() {
-    const data = await fetch(
+    const responseNowPlaying = await fetch(
         "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
         {
             headers: {
@@ -13,8 +12,9 @@ export default async function Index() {
             },
         }
     );
-    const { results } = await data.json();
-    const Amazon = await fetch(
+    const dataNowPlaying = await responseNowPlaying.json();
+
+    const responseAmazonPrime = await fetch(
         "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&page=1&sort_by=popularity.desc&with_companies=210099",
         {
             headers: {
@@ -24,41 +24,40 @@ export default async function Index() {
             },
         }
     );
-    const resultsAmazon = await Amazon.json();
+    const dataAmazonPrime = await responseAmazonPrime.json();
 
-    console.log(resultsAmazon);
-    https: return (
+    // console.log("----" + resultsAmazon);
+
+    return (
         <>
-            <h2>movies</h2>
-            <Suspense fallback={<Loading />}>
-                <section className="flex  gap-3.5 overflow-x-auto py-14">
-                    {results.map((movie) => {
-                        return (
-                            <Link key={movie.id} href={`${movie.id}`}>
-                                <Card
-                                    title={movie.title}
-                                    body={movie.title}
-                                    image={movie.backdrop_path}
-                                />
-                            </Link>
-                        );
-                    })}
-                </section>
-            </Suspense>
-            <h2>amazon movies</h2>
-            <section className="flex  gap-3.5 overflow-x-auto py-14">
-                {resultsAmazon.results.map((movie) => {
-                    return (
-                        <Link key={movie.id} href={`${movie.id}`}>
-                            <Card
-                                title={movie.title}
-                                body={movie.title}
-                                image={movie.backdrop_path}
-                            />
-                        </Link>
-                    );
-                })}
-            </section>
+            <div className="flex justify-between items-center ">
+                <div className="flex items-center">
+                    <div className="provider py-8 ml-4"> الافلام الشائعة </div>
+                </div>
+                <a className="p-2 px-4 rounded-xl border-2 border-[#fca311] text-xs font-bold hover:bg-[#fca311] hover:text-[#14213d]">
+                    شاهد المزيد
+                </a>
+            </div>
+            <div className="relative">
+                <Suspense fallback={<Loading />}>
+                    <Carousel data={dataNowPlaying.results} />
+                </Suspense>
+            </div>
+            <div className="flex justify-between items-center ">
+                <div className="flex items-center">
+                    <div className="provider py-8 ml-4 capitalize">
+                        افلام amazon prime
+                    </div>
+                </div>
+                <a className="p-2 px-4 rounded-xl border-2 border-[#fca311] text-xs font-bold hover:bg-[#fca311] hover:text-[#14213d]">
+                    شاهد المزيد
+                </a>
+            </div>
+            <div className="relative">
+                <Suspense fallback={<Loading />}>
+                    <Carousel data={dataAmazonPrime.results} />
+                </Suspense>
+            </div>
         </>
     );
 }

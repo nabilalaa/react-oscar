@@ -39,6 +39,7 @@ export default function SideMenu() {
             </div>
             <ul className="links p-4 text-white">
                 <Link
+                    onClick={handleClickOutside}
                     href="/"
                     className="router-link-active router-link-exact-active hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold"
                     aria-current="page"
@@ -46,6 +47,7 @@ export default function SideMenu() {
                     <li className="">الصفحة الرئيسية</li>
                 </Link>
                 <Link
+                    onClick={handleClickOutside}
                     href="/about"
                     className="hover:bg-secondaryColor flex p-4 rounded-xl mb-2 font-bold"
                 >

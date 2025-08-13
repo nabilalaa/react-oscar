@@ -2,7 +2,7 @@
 import Link from "next/link";
 export default function Nav() {
     return (
-        <nav className="text-white bg-amber-400 w-full py-4">
+        <nav className="text-white  w-full py-4">
             <div className="container">
                 <div className="flex flex-row-reverse justify-between items-center">
                     <div className="logo font-logo font-bold tracking-wider text-xl space-x-2 uppercase">

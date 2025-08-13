@@ -1,7 +1,19 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
 
+/* @font-face {
+    font-display: swap;
+    font-family: Pasajero;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/Pasajero.d6e15a40.woff2) format("woff2"),
+        url(/Pasajero.cd5f38e0.woff) format("woff");
+} */
 body {
     direction: rtl;
+    background-color: #14213d;
+    color: #fff;
+    font-family: "Almarai", sans-serif;
 }
 .container {
     margin: auto;
@@ -12,6 +24,10 @@ section {
     scrollbar-width: none;
 }
 
+.font-logo {
+    font-family: Pasajero;
+}
+
 .scroll-container {
     overflow-x: auto;
     -ms-overflow-style: none; /* IE and Edge */
@@ -20,4 +36,9 @@ section {
 
 .section::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
+}
+
+.mainColor {
+    color: #14213d;
+    background-color: #fca311;
 }

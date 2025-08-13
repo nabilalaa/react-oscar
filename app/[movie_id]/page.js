@@ -1,7 +1,7 @@
 const Movie = async ({ params }) => {
     const { movie_id } = await params;
     const dataMovies = await fetch(
-        `https://api.themoviedb.org/3/movie/${movie_id}`,
+        `https://api.themoviedb.org/3/movie/${movie_id}&language=ar-EG`,
         {
             headers: {
                 accept: "application/json",
@@ -22,7 +22,6 @@ const Movie = async ({ params }) => {
             },
         }
     );
-
     const { cast } = await dataCredits.json();
 
     return (
@@ -35,7 +34,7 @@ const Movie = async ({ params }) => {
                 )`,
                 }}
             >
-                <div className="overlay w-full h-full bg-amber-300/50 ">
+                <div className="overlay w-full h-full bg-[#fca311]/50">
                     <section className="about p-4 mt-14 w-full h-full">
                         <div className="container">
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[20%_80%] gap-8">
@@ -67,7 +66,7 @@ const Movie = async ({ params }) => {
                     </section>
                 </div>
             </header>
-            <section className="credits mt-8">
+            <section className="credits my-8">
                 <div className="container">
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-4">
                         {cast.slice(0, 10).map((actor) => {
@@ -95,6 +94,16 @@ const Movie = async ({ params }) => {
                             );
                         })}
                     </div>
+                </div>
+            </section>
+            <section className="pt-[56.25%] max-sm:pb-[56.25%] sm:w-[80%] m-auto relative">
+                <div className="container">
+                    <iframe
+                        allow="fullscreen"
+                        className="border-0 absolute top-0 bottom-0 right-0 left-0 w-full h-full"
+                        src={`https://vidsrc.cc/v3/embed/movie/${movie_id}?autoPlay=false`}
+                        type=""
+                    ></iframe>
                 </div>
             </section>
         </>
