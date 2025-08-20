@@ -27,7 +27,7 @@ export default function Card({
         <h2 href="#" className=" font-bold md:text-2xl line-clamp-2">
           {title}
         </h2>
-        <span className="text-slate-400 pt-2 font-semibold">
+        <span className="text-[#14213d] pt-2 font-semibold">
           {release_date}
         </span>
 
